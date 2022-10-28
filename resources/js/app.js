@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue'
 
 /**
  * The following block of code may be used to automatically register your
@@ -17,8 +17,16 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-const files = require.context('./', true, /\.vue$/i)
-files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
+// const files = require.context('./', true, /\.vue$/i);
+// console.log("Files: ", files);
+// files.keys().map((key) => { 
+//     console.log("key: ", key, key.split('/').pop().split('.')[0], files(key));
+//     Vue.component(key.split('/').pop().split('.')[0], files(key))
+// });
+
+Vue.component('ChatForm', require('./components/ChatForm.vue').default);
+Vue.component('ChatMessages',require('./components/ChatMessages.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
