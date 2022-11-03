@@ -22,3 +22,14 @@ Be sure to check out the [official documentation](https://docs.beyondco.de/larav
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+php artisan route:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan config:clear
+
+
+php artisan websockets:serve
+
+php artisan serve
